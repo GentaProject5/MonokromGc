@@ -114,10 +114,10 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-PRIME_IMG = "https://telegra.ph/file/b9fa4e1360d0a872a3cd5.jpg"
+PRIME_IMG = "https://telegra.ph/file/e06a886b866383dc9f507.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @Bukan_guudlooking \
+ You can support the project by contacting @depapancake \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -374,15 +374,12 @@ def prime_about_callback(update, context):
     query = update.callback_query
     if query.data == "prime_":
         query.message.edit_text(
-            text=f"๏ I'm *{BOT_NAME}*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            f"\n\n_{BOT_NAME}'s licensed under the GNU General Public License v3.0_"
-            f"\n\n Click on button bellow to get basic help for {BOT_NAME}.",
+            text=f"๏ Aku *{BOT_NAME}*, Aku nggae bot iki tgae mempergampang awakmu ngatur group."
+            "\n• Gunaku iku akeh."
+            "\n• Aku isok ngerubah Rules, Bio, Nama gc dll."
+            "\n• Aku yo isok ngatur wong seng kakean cocot langsung tak kick."
+            "\n• Wes akeh lah pookok e, oiyo ojok lali join gcku GC MUTUALAN18+"
+            "\n• https://t.me/+biNrspIE2zFmYzk1 ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -396,7 +393,7 @@ def prime_about_callback(update, context):
                     InlineKeyboardButton(text="Credits", callback_data="prime_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
+                    InlineKeyboardButton(text="GC", url="https://t.me/+biNrspIE2zFmYzk1"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="prime_back"),
@@ -421,14 +418,14 @@ def prime_about_callback(update, context):
 
     elif query.data == "prime_admin":
         query.message.edit_text(
-            text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Prime Mega now ready to manage your group."
-            "\n\n*Admin Tools*"
-            "\nBasic Admin tools help you to protect and powerup your group."
-            "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
+            text=f"*๏ Wes ndang aturen grupmmu*"
+            f"\nSalam, *{BOT_NAME}* Kon wes siap ngatur grupmu."
+            "\n\n*Admin Fitur*"
+            "\nWes initie kon isok ngatur grup mu nggawe grup iki."
+            "\nMisale ngeban member, Ngekik member, Mromot wong dadi admin mek nggae ketikan."
             "\n\n*Greetings*"
-            "\nLets set a welcome message to welcome new users coming to your group."
-            "\nsend `/setwelcome [message]` to set a welcome message!",
+            "\nBiasa e lek kon duwe gc iku ngatur welcome opo ucapan selat datang."
+            "\nkirimen `/setwelcome [message]` gae ngatur kata kata ucapan selamat datang e!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -439,9 +436,9 @@ def prime_about_callback(update, context):
     elif query.data == "prime_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            f"\nKon isok ngirim gambar,suara dll nak notes"
+            f"\nGae nyobak simpel e kon isok nggae # gae nglanjutnya tulisan"
+            f"\n\nawakmu yo isok seting tombol gae notes karo filters utowo (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Go Back", callback_data="prime_")]]
@@ -455,8 +452,8 @@ def prime_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url=f"t.me/{SUPPORT_CHAT}"),
-                    InlineKeyboardButton(text="Updates", url=f"https://t.me/{SUPPORT_CHANNEL}"),
+                    InlineKeyboardButton(text="Support", url=f"t.me/genintropet"),
+                    InlineKeyboardButton(text="Updates", url=f"https://t.me/depapancake"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="prime_"),
@@ -469,14 +466,14 @@ def prime_about_callback(update, context):
 
     elif query.data == "prime_credit":
         query.message.edit_text(
-            text=f"<b>๏ Credis for primeMega</b>\n"
-            f"\nHere Developers Making The PrimeMegaRobot",
+            text=f"๏ iki wong seng ngguwanteng sak {BOT_NAME}\n"
+            f"\nIki wong seng kuwece pol tapi gak due bucinan ndek {BOT_NAME}",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Tonic", url="t.me/Bukan_guudlooking"),
-                    InlineKeyboardButton(text="x~b", url="t.me/Xbarok"),
+                    InlineKeyboardButton(text="Depa", url="t.me/depapancake"),
+                    InlineKeyboardButton(text="Channel", url="t.me/genintropet"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="prime_"),
@@ -490,23 +487,17 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="๏›› This advance command for Musicplayer."
-            "\n\n๏ Command for admins only."
-            "\n • `/reload` - For refreshing the adminlist."
-            "\n • `/userbotjoin` - For inviting the assistant to your groups."
-            "\n • `/userbotleave` - Use this if you want the assistant leaving your groups."
-            "\n • `/pause` - To pause the playback."
-            "\n • `/vpause` - To pause video stream."
-            "\n • `/resume` - To resuming the playback You've paused."
-            "\n • `/vresume` - To resuming video stream."
-            "\n • `/skip` - To skipping the player."
-            "\n • `/vskip` - To skipping the video stream."
-            "\n • `/end` - For end the playback."
-            "\n • `/vend` - For end the video stream."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
-            "\n\n๏ Command for all members."
-            "\n • `/play` or `/ytp` <query> - Playing music via YouTube."
-            "\n • `/vplay` <query or reply audio> - Playing video from YouTube.",
+            text="๏›› Iki command gawe Musicplayer."
+            "\n\n๏ Command ge admins tok."
+            "\n • `/reload` - gae refresh adminlist."
+            "\n • `/pause` - gae pause lagu."
+            "\n • `/resume` - gae nglanjutno lagu seng mbok pause."
+            "\n • `/skip` - gae nglewati lagu seng mok stel."
+            "\n • `/end` - gae ngendekno lagu utowo video seng mbok stel."
+            "\n • `/musicplayer <on/off>` - iki gae ngaktipno ON utowo OFF iku musicplayer."
+            "\n\n๏ Command gae kabeh members."
+            "\n • `/play` <query /reply audio> - Muter musik via YouTube."
+            "\n • `/playlist` - Ndelok opo seng nak njero list seng mbok stel",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -540,7 +531,7 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_text(
-                f"Contact me in PM to get help of {module.capitalize()}",
+                f"Pece en aku lek onok seng bingung utowo butuh bantuan {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -556,7 +547,7 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "Pece en aku lek onok seng bingung utowo butuh bantuan.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -803,7 +794,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "👋 Hi friends, I'm alive.",
+                "👋 Hi cok, Aku urip.",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
